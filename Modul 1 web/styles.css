@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px; /* Ubah sesuai ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff7b00; /* Warna oranye saat di-hover */
+}
+
+/* Hero Section */
+header.hero {
+    background: url('E:\Mata Kuliah dan Tugas Kuliah\Semester 5\Pemrograman Web\coba coba\gambar/header-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+header .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff7b00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Coffee Types Section */
+.coffee-types {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.coffee-types h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.coffee-items {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.coffee-item {
+    max-width: 300px;
+    text-align: left;
+    padding: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    color: #ff7b00;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-us, .newsletter, .social-media {
+    max-width: 300px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: #ff7b00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
