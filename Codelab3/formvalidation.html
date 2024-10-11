@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5e6d3;
+        }
+        .form-container {
+            background-color: #2e8b57;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Pendaftaran</h2>
+        <form id="registrationForm">
+            <input type="text" id="name" placeholder="Nama" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="address" placeholder="Alamat" required>
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script>
+        function showNotification(message) {
+            var notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var address = document.getElementById('address').value.trim();
+            
+            if (name === '' || email === '' || address === '') {
+                alert('Semua data harus diisi!');
+            } else {
+                showNotification('Data berhasil dibuat!');
+                this.reset(); // Reset the form after successful submission
+            }
+        });
+    </script>
+</body>
+</html>
